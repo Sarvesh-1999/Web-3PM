@@ -1,0 +1,18 @@
+@import url("./basic.css");
+
+html {
+    /* global variable */
+  --primary: pink;
+}
+
+h3 {
+  /* css variables - local */
+  --qsp: aqua;
+  --b7: red;
+  background-color: var(--qsp);
+  color: var(--b7);
+}
+
+div {
+  background-color: var(--primary) !important;
+}

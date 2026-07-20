@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      *{
+        font-family: sans-serif;
+        background-color: whitesmoke;
+      }
+
+      #head {
+        background-color: yellow;
+      }
+      .content {
+        background-color: aqua;
+      }
+      .text-red {
+        color: red;
+      }
+      h4{
+        background-color: pink;
+      }
+
+      #navbar , footer , .page_header{
+        background-color: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn Simple Selectors</h1>
+    <!-- 
+    There are 5 types
+
+    1) id : used to target unique element. symbol is #
+    2) class : used to target multiple similer or diff elements. symbol is dot.
+    3) element : used to target multiple similer elements. symbol is tagname
+    4) group :  used to group multiple elements. symbol is comma
+    5) universal : used to target all elements in webpage. symbol is *
+    -->
+    <h1 id="head">style me using ID</h1>
+
+    <h2 class="content">style me using class</h2>
+    <h3 class="content text-red">style me using class</h3>
+    <p class="content">style me using class</p>
+
+    <h4>style me using element selector</h4>
+    <h4>style me using element selector</h4>
+    <h4>style me using element selector</h4>
+
+
+    <nav id="navbar">i am nav</nav>
+    <footer>i am footer</footer>
+    <header class="page_header">i am header</header>
+
+    
+
+  </body>
+</html>
