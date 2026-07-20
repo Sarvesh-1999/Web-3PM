@@ -25,17 +25,59 @@
       a:active {
         color: blue;
       }
+
+      ol > li:first-child {
+        background-color: red;
+      }
+
+      ol > li:last-child {
+        background-color: aqua;
+      }
+
+      ol > li:nth-child(3) {
+        background-color: orange;
+      }
+
+      div > nav:first-of-type {
+        background-color: orange;
+      }
+      div > nav:last-of-type {
+        background-color: green;
+      }
+      div > nav:nth-of-type(3) {
+        background-color: blue;
+      }
+
+
     </style>
   </head>
   <body>
     <h1>Learn Pseudo-class Selectors :</h1>
     <button>Submit</button>
     <br />
-    <a href="https://www.ajio.com">
-        ajio
-    </a>
-    <a href="https://www.myntra.com">
-        myntra
-    </a>
+    <a href="https://www.ajio.com"> ajio </a>
+    <a href="https://www.myntra.com"> myntra </a>
+
+    <ol>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JS</li>
+      <li>REACT</li>
+      <li>TAILWIND</li>
+    </ol>
+
+    <div>
+      <header>header 1</header>
+      <nav>nav 1</nav>
+      <section>section 1</section>
+      <header>header 2</header>
+      <nav>nav 2</nav>
+      <nav>nav 3</nav>
+      <section>section 2</section>
+      <header>header 3</header>
+      <nav>nav 4</nav>
+    </div>
+
+    
   </body>
 </html>

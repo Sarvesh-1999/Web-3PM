@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div[name] {
+        background-color: yellow;
+      }
+      div[name="box2"] {
+        background-color: orange;
+      }
+      div[name|="box"] {
+        background-color: blueviolet;
+      }
+      div[name~="card"] {
+        background-color: pink;
+      }
+      div[name^="nav"] {
+        background-color: aqua;
+      }
+      div[name$="lay"] {
+        background-color: violet;
+      }
+      div[name*="oo"] {
+        background-color: chartreuse;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn Attribute Selectors</h1>
+
+    <div name="box1">box 1</div>
+    <div name="box2">box 2</div>
+    <div name="box-wrapper">box 3</div>
+    <div name="card container">box 4</div>
+    <div name="navbar">box 5</div>
+    <div name="overlay">box 6</div>
+    <div name="footer">box 7</div>
+  </body>
+</html>
