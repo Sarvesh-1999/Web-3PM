@@ -60,10 +60,73 @@
 // function
 
 //! MUTABLE VS IMMUTABLE
-var arr = [10, 20, 30];
-arr[0] = 100;
-console.log(arr); // [100, 20, 30]
+// var arr = [10, 20, 30];
+// arr[0] = 100;
+// console.log(arr); // [100, 20, 30]
 
-var str = "Hello";
-str[0] = "X";
-console.log(str); // Hello
+// var str = "Hello";
+// str[0] = "X";
+// console.log(str); // Hello
+
+//!  TYPES OF VARIABLES
+// 1) GLOBAL VARIABLE
+// 2) LOCAL VARIABLE
+
+//! WAYS OF DECLARING A VARAIBLE IN JS
+// 1) var
+// 2) let   ---> introduced in ES6
+// 3) const ---> introduced in ES6
+
+//! DIFFERENCE BTW var , let AND const
+//! var example
+
+// var a;
+// console.log(a); // ud
+
+// a = 10;
+// console.log(a); // 10
+
+// var b = 20;
+// console.log(b); // 20
+
+// var a;
+// console.log(a);
+
+// a = 100;
+// console.log(a); // 100
+
+// var b = 200;
+// console.log(b); // 200
+
+//! let example
+// let x;
+// console.log(x); // ud
+
+// x = 10;
+// console.log(x); // 10
+
+// let y = 20;
+// console.log(y); // 20
+
+// // let x; //! error
+
+// x = 100;
+// console.log(x); // 100
+
+// // let y = 200 //! error
+
+// //! const example
+// const LIMIT = 100;
+// console.log(LIMIT);
+
+//! HOISTING : Hoisting is JavaScript's default behavior of lifting variable and function declarations to the top of their current scope before the code actually runs.
+
+// console.log(a); // ud <--- due to hoisting
+// var a = 10;
+// console.log(a); // 10
+
+// // console.log(b); //! Cannot access 'b' before initialization
+// let b = 20
+// console.log(b); // 20
+
+
