@@ -129,4 +129,66 @@
 // let b = 20
 // console.log(b); // 20
 
+// //! SCOPES
+// var a1 = 10; //     global variables - global scope
+// let a2 = 20; //     global variables - script scope <--- TDZ
+// const a3 = 30; //   global variables - script scope <--- TDZ
+// console.log(a1, a2, a3);
 
+// if (100 > 10) {
+//   var b1 = 100; //  global variables - global scope
+//   let b2 = 200; //  local variable - block scope
+//   const b3 = 300; //    local variable - block scope
+// }
+// console.log(b1); // 100
+
+// function demo() {
+//   var c1 = 1000; //  local variable - local scope || function scoped
+//   let c2 = 2000; //  local variable - local scope
+//   const c3 = 3000; //    local variable - local scope
+// }
+// demo();
+
+//! FUNCTIONS
+
+//! 1) NAMED FUNCTION : Function which has name
+// NOTE :- Function hoisting is only possible in named function
+
+// greet(); //<-- due to Hoisting
+
+// function greet() {
+//   console.log("Welcome");
+// }
+
+// greet();
+
+//! GEC
+// console.log("Start");
+// console.log(a);
+// student();
+// var a = 10;
+// console.log(a);
+// function student() {
+//   let b = 20;
+//   console.log(b);
+// }
+// student();
+// console.log(a);
+// console.log("end");
+
+//! 2) ANONYMOUS FUNCTION : function without name
+// function (){}
+
+//! 3) FUNCTION EXPRESSION : used to call anonymous function
+// let f1 = function () {
+//   console.log("Hii");
+// };
+// f1()
+
+//! 4) FUNCTION WITH ARGUEMENTS AND PARAMETERS
+let sum = function (n1 = 0, n2 = 0) {
+  console.log(arguments);
+  console.log(n1 + n2);
+};
+
+sum(10, 20, 30);
