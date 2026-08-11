@@ -186,9 +186,74 @@
 // f1()
 
 //! 4) FUNCTION WITH ARGUEMENTS AND PARAMETERS
-let sum = function (n1 = 0, n2 = 0) {
-  console.log(arguments);
-  console.log(n1 + n2);
-};
+// let sum = function (n1 = 0, n2 = 0) {
+//   console.log(arguments);
+//   console.log(n1 + n2);
+// };
 
-sum(10, 20, 30);
+// sum(10, 20, 30);
+
+//! "arguements" EXAMPLE
+// function demo(a, b, ...c) {
+//   console.log(a, b, c);
+
+//   console.log(arguments); // Array-Like Object
+//   console.log(Array.isArray(arguments)); // false
+
+//   console.log(Array.isArray(c)); // true
+// }
+// demo(10, 20, 30, 40, 50);
+
+//! 5) NESTED FUNCTION
+// CLOSURE - it is a temporary memory which is created whenever child func tries to access parent's func property
+
+// function Parent() {
+//   let money = 50000;
+//   let house = "Home";
+//   let car = "Toyota";
+//   console.log(money);
+
+//   function Child() {
+//     let saving = 5000;
+//     console.log(saving, money); // due to closure
+//   }
+
+//   Child();
+// }
+
+// Parent();
+
+//! 6) RETURN TYPE FUNCTION
+// function sum(n1 = 0, n2 = 0) {
+//   let result = n1 + n2;
+//   return result; // 25
+// }
+// let val = sum(5, 20);
+// console.log(val);
+
+//! 7) HIGHER ORDER FUNCTION - HOF
+// 1) A function should return another function
+function counter() {
+  let count = 0;
+
+  function child() {
+    count++;
+    console.log("count is", count);
+  }
+
+  return child;
+}
+let c1 = counter();
+c1();
+
+
+
+// 2) A function should accept another function as arguement
+
+// EXAMPLE----> array.forEach(function(){})
+
+//! CALLBACK : A function which passes as an arguement
+function calculate(x){
+
+}
+calculate(function(){})
