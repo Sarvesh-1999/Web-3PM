@@ -233,27 +233,125 @@
 
 //! 7) HIGHER ORDER FUNCTION - HOF
 // 1) A function should return another function
-function counter() {
-  let count = 0;
+// function counter() {
+//   let count = 0;
 
-  function child() {
-    count++;
-    console.log("count is", count);
-  }
+//   function child() {
+//     count++;
+//     console.log("count is", count);
+//   }
 
-  return child;
-}
-let c1 = counter();
-c1();
-
-
+//   return child;
+// }
+// let c1 = counter();
+// c1();
 
 // 2) A function should accept another function as arguement
 
 // EXAMPLE----> array.forEach(function(){})
 
 //! CALLBACK : A function which passes as an arguement
-function calculate(x){
+// function calculate(x){
 
-}
-calculate(function(){})
+// }
+// calculate(function(){})
+
+//! 8) IMMEDIATELY INVOKED FUNCTION EXPRESSION (IIFE)
+// (function () {
+//   console.log("I am IIFE");
+// })();
+
+//! 9) ARROW FUNCTION :- es6 ---> shorter syntax
+// const f1 = () => {
+//   console.log("Arrow function 1");
+// };
+// f1();
+
+// const f2 = (x) => {
+//   console.log("Arrow function 2", x);
+// };
+// f2(10);
+
+// const f3 = () => console.log("Arrow function 3");
+// f3();
+
+// // EXPLICIT RETURN
+// const f4 = (n1 = 0, n2 = 0) => {
+//   return n1 + n2;
+// };
+// console.log(f4(10, 20));
+
+// // IMPLICIT RETURN
+// const f5 = (n1 = 0, n2 = 0) => n1 + n2;
+// console.log(f5(50, 10));
+
+// const f6 = () => ({ name: "John" });
+// console.log(f6());
+
+//! OBJECTS
+
+//! CREATE
+const obj1 = {
+  firstname: "John",
+  lastname: "Doe",
+  age: 20,
+  isAdmin: false,
+  company: "TCS",
+};
+
+// //! READ
+// console.log(obj1.firstname);
+
+// //! UPDATE
+// obj1.age = 24;
+// console.log(obj1.age);
+
+// //! ADD NEW KEY
+// obj1.salary = 50000;
+
+// //! DELETE
+// delete obj1.isAdmin
+
+// console.log(obj1);
+
+//! LOOP OVER AN OBJECT
+// for (let i in obj1) {
+//   console.log(obj1[i]);
+// }
+
+// let student = {
+//   fname: "Henry",
+//   course: "MERN Stack",
+// };
+
+// let x = "fname";
+// console.log(student[x]);
+
+//! NESTED OBJECT
+let employee = {
+  fullname: {
+    firstname: "John",
+    lastname: "Doe",
+  },
+
+  age: 35,
+  address: {
+    city: "Noida",
+    state: "UP",
+    pin: 201301,
+    coordinates: { lat: 9876543212, long: 98765432345 },
+  },
+};
+
+console.log(employee.fullname.firstname);
+console.log(employee.address.coordinates.lat);
+
+//! DESTRUCTURING
+let user = {
+  fname: "Jane",
+  lname: "Doe",
+  age: 20,
+};
+
+let { age, fname:firstname, lname, salary:sal = "NA"} = user;
+console.log(age, firstname, lname, sal);
