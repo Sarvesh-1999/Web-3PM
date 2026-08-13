@@ -328,30 +328,135 @@ const obj1 = {
 // console.log(student[x]);
 
 //! NESTED OBJECT
-let employee = {
-  fullname: {
-    firstname: "John",
-    lastname: "Doe",
-  },
+// let employee = {
+//   fullname: {
+//     firstname: "John",
+//     lastname: "Doe",
+//   },
 
-  age: 35,
-  address: {
-    city: "Noida",
-    state: "UP",
-    pin: 201301,
-    coordinates: { lat: 9876543212, long: 98765432345 },
-  },
-};
+//   age: 35,
+//   address: {
+//     city: "Noida",
+//     state: "UP",
+//     pin: 201301,
+//     coordinates: { lat: 9876543212, long: 98765432345 },
+//   },
+// };
 
-console.log(employee.fullname.firstname);
-console.log(employee.address.coordinates.lat);
+// console.log(employee.fullname.firstname);
+// console.log(employee.address.coordinates.lat);
 
-//! DESTRUCTURING
-let user = {
-  fname: "Jane",
-  lname: "Doe",
-  age: 20,
-};
+// //! DESTRUCTURING
+// let user = {
+//   fname: "Jane",
+//   lname: "Doe",
+//   age: 20,
+// };
 
-let { age, fname:firstname, lname, salary:sal = "NA"} = user;
-console.log(age, firstname, lname, sal);
+// let { age, fname:firstname, lname, salary:sal = "NA"} = user;
+// console.log(age, firstname, lname, sal);
+
+//! NESTED OBJECT DESTRUCTURING
+// let user = {
+//   name: "John Doe",
+//   address: {
+//     city: "Noida",
+//     state: "UP",
+//   },
+// };
+
+// let { name , address:{city , state} } = user
+// console.log(name);
+
+// console.log(user.address); // {city: 'Noida', state: 'UP'}
+// console.log(city, state);
+
+//! ARRAYS :-
+// let arr1 = [10, 20, 30, 40, 50];
+// //           0   1   2   3   4
+// console.log(arr1);
+// console.log(arr1.length); // 5 <-- property
+
+//! ARRAY METHODS
+// let arr1 = [10, 20, 30, 40, 50];
+// console.log(arr1); // [10, 20, 30, 40, 50]
+
+//! push() : adds element at the last of an array
+// arr1.push(60, 70, 80);
+// console.log(arr1); // [10, 20, 30, 40, 50, 60, 70, 80]
+
+//! pop() : removes element from last of an array
+// arr1.pop();
+// console.log(arr1); // [10, 20, 30, 40, 50, 60, 70]
+
+//! unshift() : adds element at the first of an array
+// arr1.unshift(100, 200);
+// console.log(arr1); // [100, 200, 10, 20, 30, 40, 50, 60, 70]
+
+//! shift() : removes element from front of an array
+// arr1.shift();
+// console.log(arr1); // [200, 10, 20, 30, 40, 50, 60, 70]
+
+//! splice(pos , deleteCount , newElements)
+// let arr2 = [100, 200, 300, 400, 500];
+
+//!-- ADD
+// arr2.splice(2, 0, 250);
+// console.log(arr2); // [100, 200, 250, 300, 400, 500];
+
+//!-- DELETE
+// arr2.splice(1, 3);
+// console.log(arr2); // [100, 500]
+
+//!-- DELETE AND ADD
+// arr2.splice(1, 2, "HelloWorld");
+// console.log(arr2); // [100, 'HelloWorld', 400, 500]
+
+//! slice(startIndex , endIndex)
+// slice always ingores endIndex
+
+// //          -4   -3   -2   -1
+// let arr3 = [100, 200, 300, 400];
+
+// let val1 = arr3.slice(1, 3);
+// console.log(val1); // [200,300]
+
+// let val2 = arr3.slice(-3, -1);
+// console.log(val2); // [200,300]
+
+// let val3 = arr3.slice(-3, 3);
+// console.log(val3); // [200,300]
+
+let arr4 = [10, 20, 30, 40, 50];
+
+//! forEach(()=>{}) : returns undefined
+let res1 = arr4.forEach((ele, idx, arr) => {
+  // console.log(ele);
+  return ele + 5;
+});
+console.log("forEach --->", res1);
+
+//! map(()=>{}) : returns new array
+let res2 = arr4.map((ele, idx, arr) => {
+  // console.log(ele);
+  return ele + 5;
+});
+console.log("map ---->", res2);
+
+//! filter(()=>{}) : returns new filtered array
+let res3 = arr4.filter((ele, idx, arr) => {
+  return ele > 30;
+});
+console.log("filter ---->", res3);
+
+//! find(()=>{}) : returns single value which satisfy the condition
+let res4 = arr4.find((ele, idx, arr) => {
+  return ele > 30;
+});
+console.log("find ---->", res4);
+
+//! findIndex(()=>{})
+let res5 = arr4.findIndex((ele, idx, arr) => {
+  return ele > 30;
+});
+console.log("find ---->", res5);
