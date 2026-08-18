@@ -427,36 +427,147 @@ const obj1 = {
 // let val3 = arr3.slice(-3, 3);
 // console.log(val3); // [200,300]
 
-let arr4 = [10, 20, 30, 40, 50];
+// let arr4 = [10, 20, 30, 40, 50];
 
-//! forEach(()=>{}) : returns undefined
-let res1 = arr4.forEach((ele, idx, arr) => {
-  // console.log(ele);
-  return ele + 5;
-});
-console.log("forEach --->", res1);
+// //! forEach(()=>{}) : returns undefined
+// let res1 = arr4.forEach((ele, idx, arr) => {
+//   // console.log(ele);
+//   return ele + 5;
+// });
+// console.log("forEach --->", res1);
 
-//! map(()=>{}) : returns new array
-let res2 = arr4.map((ele, idx, arr) => {
-  // console.log(ele);
-  return ele + 5;
-});
-console.log("map ---->", res2);
+// //! map(()=>{}) : returns new array
+// let res2 = arr4.map((ele, idx, arr) => {
+//   // console.log(ele);
+//   return ele + 5;
+// });
+// console.log("map ---->", res2);
 
-//! filter(()=>{}) : returns new filtered array
-let res3 = arr4.filter((ele, idx, arr) => {
-  return ele > 30;
-});
-console.log("filter ---->", res3);
+// //! filter(()=>{}) : returns new filtered array
+// let res3 = arr4.filter((ele, idx, arr) => {
+//   return ele > 30;
+// });
+// console.log("filter ---->", res3);
 
-//! find(()=>{}) : returns single value which satisfy the condition
-let res4 = arr4.find((ele, idx, arr) => {
-  return ele > 30;
-});
-console.log("find ---->", res4);
+// //! find(()=>{}) : returns single value which satisfy the condition
+// let res4 = arr4.find((ele, idx, arr) => {
+//   return ele > 30;
+// });
+// console.log("find ---->", res4);
 
-//! findIndex(()=>{})
-let res5 = arr4.findIndex((ele, idx, arr) => {
-  return ele > 30;
+// //! findIndex(()=>{})
+// let res5 = arr4.findIndex((ele, idx, arr) => {
+//   return ele > 30;
+// });
+// console.log("find ---->", res5);
+
+//! Promise: A JavaScript Promise is an object representing the eventual completion or failure of an asynchronous operation. It serves as a placeholder for a value that is initially unknown but will be delivered in the future.
+
+// let p1 = fetch("https://dummyjson.com/todos");
+// // console.log(p1);
+
+// p1.then((resp) => {
+//   let p2 = resp.json();
+//   // console.log(p2);
+
+//   p2.then((data) => {
+//     console.log(data.todos);
+//   });
+
+//   p2.catch((err) => console.log(err));
+// });
+
+// p1.catch((err) => {
+//   console.log("Something went wrong", err);
+// });
+
+//! ASYNC/AWAIT : The modern standard for handling promises cleanly is async/await, which writes asynchronous code that looks and behaves like synchronous code
+// async function getTodos() {
+//   try {
+//     let resp = await fetch("https://dummyjson.com/todos");
+//     let data = await resp.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// getTodos();
+
+//! PROMISE RIVISION
+
+// const API = "https://dummyjson.com/todos";
+// let p1 = fetch(API);
+// console.log(p1);
+
+// p1.then((resp) => {
+//   let p2 = resp.json();
+//   console.log(p2);
+
+//   p2.then((data) => console.log(data.todos));
+//   p2.catch((err) => console.log(err));
+// });
+
+// p1.catch((err) => {
+//   console.log(err);
+// });
+
+//! ASYNC / AWAIT ---> functions
+
+// async function fetchTodosData() {
+//   try {
+//     let resp = await fetch("https://dummyjson.com/todos");
+//     let data = await resp.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// fetchTodosData();
+
+//! TIMER FUNCTIONS
+// // 1) setInterval(callbackFn , intervalTime)
+// console.log("Start");
+
+// let id = setInterval(() => {
+//   console.log("Hii");
+// }, 1000);
+
+// // 2) setTimeout(callbackFn , delay)
+
+// setTimeout(() => {
+//   console.log("Byeee");
+//   clearInterval(id);
+// }, 8000);
+
+// console.log("End");
+
+//! EVENT LOOP
+console.log("Start");
+
+setTimeout(function T1() {
+  console.log("T1");
+}, 5000);
+
+Promise.resolve().then(function P1() {
+  console.log("P1");
 });
-console.log("find ---->", res5);
+
+console.log("Hiiii");
+
+setTimeout(function T2() {
+  console.log("T2");
+}, 2000);
+
+console.log("End");
+
+/*
+! Output
+Start
+Hiiii
+End
+P1
+T2
+T1
+*/
