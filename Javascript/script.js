@@ -527,21 +527,21 @@ const obj1 = {
 // fetchTodosData();
 
 //! TIMER FUNCTIONS
-// // 1) setInterval(callbackFn , intervalTime)
-// console.log("Start");
+// 1) setInterval(callbackFn , intervalTime)
+console.log("Start");
 
-// let id = setInterval(() => {
-//   console.log("Hii");
-// }, 1000);
+let id = setInterval(() => {
+  console.log("Hii");
+}, 1000);
 
-// // 2) setTimeout(callbackFn , delay)
+// 2) setTimeout(callbackFn , delay)
 
-// setTimeout(() => {
-//   console.log("Byeee");
-//   clearInterval(id);
-// }, 8000);
+setTimeout(() => {
+  console.log("Byeee");
+  clearInterval(id);
+}, 8000);
 
-// console.log("End");
+console.log("End");
 
 //! EVENT LOOP
 console.log("Start");
